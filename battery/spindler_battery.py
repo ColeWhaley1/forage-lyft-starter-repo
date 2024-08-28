@@ -8,6 +8,5 @@ class SpindlerBattery(Battery):
     # It is not specified how you determine when a battery needs service
     def needs_service(self) -> bool:
         service_threshold_date = self.last_service_date.replace(year=self.last_service_date.year + 2)
-        if self.current_date > service_threshold_date:
-            return True
-        return False
+        
+        return self.current_date > service_threshold_date
