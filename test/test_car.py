@@ -80,7 +80,7 @@ class TestSternman(unittest.TestCase):
 class TestSpindler(unittest.TestCase):
     def test_battery_should_be_serviced(self):
 
-        last_service_date = date(2022, 1, 1)
+        last_service_date = date(2021, 1, 1)
         mock_current_date = date(2024, 1, 2)
 
         battery = SpindlerBattery(last_service_date, mock_current_date)
@@ -98,7 +98,7 @@ class TestSpindler(unittest.TestCase):
 
     def test_battery_should_not_be_serviced_equals_threshold(self):
 
-        last_service_date = date(2022, 1, 1)
+        last_service_date = date(2021, 1, 1)
         mock_current_date = date(2024, 1, 1)
 
         battery = SpindlerBattery(last_service_date, mock_current_date)
